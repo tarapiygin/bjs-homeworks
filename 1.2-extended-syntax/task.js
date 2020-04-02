@@ -1,6 +1,6 @@
 "use strict";
 function getResult(a, b, c) {
-    const d = b*b - 4 * a * c;
+    const d = parseFloat(b*b - 4 * a * c);
     const result = [];
     if (d > 0) {
         result[0] = (-b + Math.sqrt(d)) / 2 * a;
