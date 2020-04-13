@@ -14,13 +14,12 @@ function sum(...args) {
 
 function compareArrays(arr1, arr2) {
     return arr1.length === arr2.length && arr1.every((number, i) => number === arr2[i]);
-};
+}
 
 function memorize(fn, limit = 10) {
     //Время работы при 100000000 итераций цикла 12512.81298828125ms
     const memory = [];
     function buffering(...args) {
-        debugger;
         let memoryObj = memory.find((obj) => {
             compareArrays(obj['args'], args);
         });
@@ -44,6 +43,7 @@ function memorize(fn, limit = 10) {
 
 function testCase(testFunction, timerID) {
     args = [[1, 2, 3], [1, 2], [1, 2, 3], [1, 2], [9, 5, 2, 4]];
+
     console.time(timerID);
     let i = 0;
     while (i < 100000000) {
