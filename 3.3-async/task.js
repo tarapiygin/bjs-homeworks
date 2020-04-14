@@ -28,11 +28,13 @@ class AlarmClock {
     };
     getCurrentFormattedTime() {
         const currentDate = formattingTime(new Date);
+
         return currentDate;
     };
     start() {
         function checkClock(alarm) {
             const currentDate = formattingTime(new Date);
+
             if (alarm.time === currentDate) {
                 const callback = alarm.callback
                 return callback();
